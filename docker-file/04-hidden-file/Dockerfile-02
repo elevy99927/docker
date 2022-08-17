@@ -1,0 +1,9 @@
+# syntax=docker/dockerfile:1
+FROM node:12-alpine
+RUN date
+WORKDIR /app
+COPY ./ASecretFile.txt .
+RUN echo ./ASecretFile.txt
+RUN rm  /app/ASecretFile.txt 
+
+CMD echo hello

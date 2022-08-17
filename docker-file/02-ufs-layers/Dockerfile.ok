@@ -1,0 +1,10 @@
+# syntax=docker/dockerfile:1
+FROM node:12-alpine
+RUN apk update && \
+ apk add curl && \
+ curl https://www.python.org/ftp/python/3.11.0/Python-3.11.0b4.tgz  -o Python-3.11.0b4.tgz && \
+ tar -zxvf Python-3.11.0b4.tgz && \
+ echo "example build our python..." && \ 
+ rm -f -r Python-3.11.0b4.tgz Python-3.11.0b4  
+WORKDIR /app
+CMD echo hello
