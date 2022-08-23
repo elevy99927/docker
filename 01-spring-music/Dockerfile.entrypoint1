@@ -1,0 +1,7 @@
+From yanivomc/alpine-oraclejdk8:slim
+
+LABEL Owner JB
+
+EXPOSE 8080
+ENTRYPOINT ["echo","hello"]
+CMD ["world"]
