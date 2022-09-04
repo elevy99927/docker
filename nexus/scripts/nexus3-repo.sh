@@ -20,6 +20,10 @@
 #these scripts may cause.
 # ....................................................................... #
 
+GREEN='\032[0;31m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
 # Create certs directory
 mkdir ../certs
 
@@ -67,10 +71,13 @@ echo $PWD
 docker-compose up -d
 
 sleep 5
-
+echo 
+echo 
+echo 
 echo "Run the following command to get the Admin Password:"
-DOCKERID  = $(docker ps |grep nexus3 | awk '{print "$1"}')
-echo "docker ps |grep nexus3 | awk '{print \"docker exec -it $DOCKERID cat /nexus-data/admin.password"}' "
+export DOCKERID=`docker ps |grep nexus3 | awk '{print $1}'`
+echo "--------------------------------------------------------"
+echo "docker exec -it $DOCKERID cat /nexus-data/admin.password ; echo"
+echo "--------------------------------------------------------"
 
-
-docker-compose down
+#docker-compose down
