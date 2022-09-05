@@ -26,7 +26,17 @@ WORKDIR /usr/src
 COPY ./sonar-runner.properties /usr/lib/sonar-scanner/conf/sonar-scanner.properties
 COPY --from=builder /usr/src/app/*.py ./
 COPY --from=builder /usr/src/app/api ./api
-RUN sonar-scanner -Dsonar.projectBaseDir=/usr/src
+RUN pwd
+RUN ls -la /usr/src
+RUN sonar-scanner -X \
+  -Dsonar.projectKey=myproject \
+  -Dsonar.host.url=http://sonarqube:9000 \
+  -Dsonar.sources=/usr/src \
+  -Dsonar.login="admin" \
+  -Dsonar.password="1234"
+
+#  -Dsonar.sources=. \
+#RUN sonar-scanner  -Dsonar.projectBaseDir=/usr/src
 
 # Runs Unit Tests
 # Phase IV
