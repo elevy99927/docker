@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  bear:
+    image: supergiantkir/animals:bear
+    ports:
+      - '8081:80'
+  moose:
+    image: supergiantkir/animals:moose
+    ports:
+      - '8082:80'
