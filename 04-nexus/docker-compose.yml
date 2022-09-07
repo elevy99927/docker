@@ -5,8 +5,7 @@ services:
     image: nginx-nexusproxy
     ports:
       - '443:443'
-      - '6666:6666'
-      - '7777:7777'
+      - '5000:5000'
     links:
       - nexus
     command: [ nginx, '-g', 'daemon off;' ]
