@@ -1,7 +1,7 @@
-from flask import Flask
 import os 
-import sys
-import signal
+#import sys
+#import signal
+from flask import Flask
 PORT = 8000
 MESSAGE = "Hello, world!\n"
 API_USER = os.getenv('SECRETS_API_USER')
