@@ -1,6 +1,8 @@
 From yanivomc/alpine-oraclejdk8:slim
 
 ARG ARTIFACT_PATH=src
+ENV DBURL=http://1.2.3.4
+
 RUN echo ${ARTIFACT_PATH}
 
 ENV ATF_JAR=spring-music.jar
