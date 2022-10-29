@@ -1,10 +1,10 @@
 #This Dockerfile has errors
 # 1. after build and run, entrypoint doesn't start 
 # 2. after build and run, config.conf is empty
-# 
+# 3. add label OWNER with your name
+
 From yanivomc/alpine-oraclejdk8:slim
 
-LABEL Owner JB
 ARG DBURL=1.1.1.1
 ARG ARTIFACT_PATH=src
 ENV ATF_JAR=spring-music.jar
