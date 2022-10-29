@@ -6,6 +6,10 @@ ip netns add blue
 
 ## View your network namespaces
 ```
+ip netns list
+
+or 
+
 ip netns
 ```
 
