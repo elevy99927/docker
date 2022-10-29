@@ -6,7 +6,7 @@ From yanivomc/alpine-oraclejdk8:slim
 
 LABEL Owner JB
 ARG DBURL=1.1.1.1
-ARG ARTIFACT_PATH=artifacts
+ARG ARTIFACT_PATH=src
 ENV ATF_JAR=spring-music.jar
 
 WORKDIR /app
