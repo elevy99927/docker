@@ -22,7 +22,7 @@ Exmaple is in `Dockerfile-02`
 
 ###1. build new image, and remove `ASecretFile.txt`
 ```
-docker build -t myapp -f ./Dockerfile-01 .
+docker build -t myapp -f ./Dockerfile-02 .
 ```
 
 ###2. login into the container
