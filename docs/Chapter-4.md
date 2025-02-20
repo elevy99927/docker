@@ -1,4 +1,4 @@
-### **Slide 4: Docker Architecture**  
+### **Chapter 4: Docker Architecture**  
 #### **Title: Understanding Docker Architecture**  
 ---
 

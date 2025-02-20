@@ -1,5 +1,5 @@
 
-### **Slide 5: Docker Images, Containers, and Layers**  
+### **Chapter 5: Docker Images, Containers, and Layers**  
 #### **Title: Understanding Docker Images, Containers, and Layers**  
 ---
 

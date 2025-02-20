@@ -1,4 +1,4 @@
-### **Slide 2: Why Use Containers Instead of Virtual Machines?**  
+### **Chapter 2: Why Use Containers Instead of Virtual Machines?**  
 #### **Title: Containers vs. Virtual Machines**  
 ---
 

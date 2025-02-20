@@ -1,4 +1,4 @@
-### **Slide 6: One Image to Many Containers**  
+### **Chapter 6: One Image to Many Containers**  
 #### **Title: Scaling with Docker – Running Multiple Containers from a Single Image**  
 ---
 

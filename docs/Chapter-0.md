@@ -11,4 +11,6 @@ For questions or feedback, feel free to reach out:
 
 ---
 ### **Next Steps**
-<A href="./Chapter-2.md">Understanding Docker architecture and core components. </A>
+<A href="./Chapter-2.md">
+Understanding Docker architecture and core components. 
+</A>

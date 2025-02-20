@@ -1,4 +1,4 @@
-### **Slide 1: Introduction to Docker**
+### **Chapter 1: Introduction to Docker**
 #### **Title: Introduction to Docker**
 ---
 ### **What is Docker?**

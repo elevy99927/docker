@@ -1,4 +1,4 @@
-### **Slide 3: Pros and Cons of Docker**  
+### **Chapter 3: Pros and Cons of Docker**  
 #### **Title: Advantages & Limitations of Docker**  
 ---
 

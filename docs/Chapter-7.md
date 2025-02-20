@@ -1,4 +1,4 @@
-### **Slide 7: Docker Engine and Container Runtimes**  
+### **Chapter 7: Docker Engine and Container Runtimes**  
 #### **Title: Understanding Docker Engine & Container Runtimes**  
 ---
 
