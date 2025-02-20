@@ -39,17 +39,42 @@ docker run -d --name my-mysql -e MYSQL_ROOT_PASSWORD=root mysql
 
 🔗 **Reference:** [GitHub Example - Docker Commands](https://github.com/elevy99927/docker/tree/main/00-namespaces)  
 
----
-### **🔹 Why Choose the Right Container Runtime?**  
-✔ **Performance** – Some runtimes are optimized for speed.  
-✔ **Security** – Sandboxed runtimes like gVisor provide stronger isolation.  
-✔ **Compatibility** – Not all runtimes support every feature of Docker.  
+### **Differences Between `containerd` and `dockerd`**  
+
+| Feature        | `dockerd` (Docker Daemon) | `containerd` (Container Runtime) |
+|---------------|--------------------------|--------------------------------|
+| **Role**      | Manages the entire Docker lifecycle | Responsible for creating & running containers |
+| **Function**  | Handles **images, networking, API, and CLI requests** | Handles **low-level container execution** |
+| **Scope**     | Full Docker management, including API | Focused only on container execution and management |
+| **Interaction** | Uses `containerd` to run containers | Uses `runc` to start containers |
+| **Abstraction Level** | High-level, includes user-friendly commands | Low-level, optimized for performance |
 
 ---
-### **Key Takeaways**  
-✔ Docker Engine **manages** containers using **container runtimes** like **containerd**.  
-✔ The **CLI, API, and Daemon** work together to run containers efficiently.  
-✔ Choosing the right runtime **depends on performance, security, and compatibility needs**.  
+### **How `dockerd` Uses `containerd`**  
+
+1️⃣ **User runs a Docker command:**  
+   ```sh
+   docker run -d nginx
+   ```
+2️⃣ **Docker CLI sends the request** to `dockerd`.  
+3️⃣ **`dockerd` communicates with `containerd`**, requesting a new container.  
+4️⃣ **`containerd` handles the execution** of the container using `runc`.  
+5️⃣ The container **starts running**, and `dockerd` manages it (logs, networking, volumes).  
+
+---
+### **Example: Running Nginx with Docker (`dockerd` → `containerd`)**  
+#### **Command:**
+```sh
+docker run -d --name my-nginx -p 8080:80 nginx
+```
+#### **Step-by-Step Execution:**  
+- **Step 1:** `dockerd` receives the `docker run` request.  
+- **Step 2:** It **checks if the image exists** locally; if not, it pulls it from Docker Hub.  
+- **Step 3:** `dockerd` forwards the request to `containerd`.  
+- **Step 4:** `containerd` **creates a container** based on the Nginx image.  
+- **Step 5:** `containerd` calls `runc` to **start the container process**.  
+- **Step 6:** The Nginx container runs, accessible on **port 8080**.
+
  
 ---
 ## License
