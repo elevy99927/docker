@@ -1,6 +1,8 @@
 # Docker Labs
 
-Welcome to the **Docker Labs** repository! This comprehensive collection is part of a DevOps course, designed to provide hands-on experience with Docker. Below, you'll find links to all the documentation files available in the `docs` directory.
+Welcome to the **Docker Labs** repository!
+<BR>This collection is part of a DevOps course, designed to provide hands-on experience with Docker. 
+<BR> Below, you'll find links to all the documentation files available in the `docs` directory, along with real life examples.
 
 ## Documentation
 
