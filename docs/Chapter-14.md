@@ -31,20 +31,50 @@ docker run -d --name app2 --network my-bridge alpine sleep 1000
 docker exec -it app2 ping app1
 ```
 📌 Containers **can communicate** because they share the same bridge network.
+---
+
 
 ---
-### **🔹 Exposing a Container to the Host**  
-- Containers don’t expose ports automatically. You need to map them using `-p`.  
-- Example: Running a web server on port 8080  
+### **🔹 Creating a Custom Network for Container Communication**  
+To allow containers to communicate, create a **user-defined bridge network**.
+
+📌 **Example: Create a network & connect containers**  
 ```sh
-docker run -d -p 8080:80 nginx
+docker network create my-network
+docker run -d --name container1 --network my-network alpine sleep 1000
+docker run -d --name container2 --network my-network alpine sleep 1000
+docker exec -it container1 ping container2
 ```
-👉 The container’s **port 80** is mapped to **port 8080** on the host.
+👉 **Expected Result:** ✅ Ping will work because both containers are on the same **custom network**.
+
+---
+### **🛠 Hands-On Exercises: Docker Networking**  
+#### **Exercise 1: Ping Containers in Default Network (Fails)**
+1. Run two containers with the default network.  
+2. Try pinging from `container1` to `container2`.  
+3. Observe that the ping fails.  
+
+#### **Exercise 2: Create a Custom Network & Ping (Works)**
+1. Create a new network.  
+2. Attach both containers to the same network.  
+3. Try pinging again – it should work!  
+
+---
+
+### **🔹 Exposing a Service on a Network**  
+If a container needs to be **accessible externally**, it must expose its ports.
+
+📌 **Example: Run an Nginx server on a custom network**  
+```sh
+docker network create web-network
+docker run -d --name web-server --network web-network -p 8080:80 nginx
+```
+👉 Now, you can access the web server at **http://localhost:8080**.
 
 ---
 ### **🔹 Hands-On Example: Custom Networking**  
 🔹 **Reference:**  
-- **Additional Example - Networking in Docker**: [Docker Networking Example](https://github.com/elevy99927/docker/02-networking/Medium-Level-Networking.md)  
+- **Additional Example - Networking in Docker**: [Docker Networking Example](https://github.com/elevy99927/docker/blob/main/02-networking/Medium-Level-Networking.md)  
 
 ---
 ### **🔹 Host vs. Bridge Networking**  
