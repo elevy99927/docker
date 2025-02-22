@@ -17,6 +17,18 @@ Each container gets its own **isolated network stack** but can be connected usin
 | **Overlay** | Network for multi-host communication (Swarm/Kubernetes) | Distributed applications |
 | **Macvlan** | Assigns MAC addresses to containers (like physical devices) | Network virtualization |
 
+
+### **🔹 Host vs. Bridge Networking**  
+
+| Feature | Bridge Network | Host Network |
+|---------|--------------|-------------|
+| **Isolation** | Containers isolated | No isolation (uses host network) |
+| **Performance** | NAT translation overhead | Faster (direct access to host) |
+| **Security** | More secure | Less secure (host exposed) |
+| **Port Mapping** | Required (`-p`) | Not needed |
+
+📌 **Use `host` networking for low-latency applications** but prefer `bridge` for security.
+
 ---
 ### **🔹 Bridge Network (Default)**  
 - Containers can communicate **within the same network** but need **port mapping** to expose services externally.  
@@ -74,21 +86,10 @@ docker run -d --name web-server --network web-network -p 8080:80 nginx
 ---
 ### **🔹 Hands-On Example: Custom Networking**  
 🔹 **Reference:**  
-- **Additional Example - Networking in Docker**: [Docker Networking Example](https://github.com/elevy99927/docker/blob/main/02-networking/Medium-Level-Networking.md)  
+- **Additional Examples - Networking in Docker**: [Docker Networking Examples](https://github.com/elevy99927/docker/blob/main/02-networking/Medium-Level-Networking.md)  
 
 ---
-### **🔹 Host vs. Bridge Networking**  
 
-| Feature | Bridge Network | Host Network |
-|---------|--------------|-------------|
-| **Isolation** | Containers isolated | No isolation (uses host network) |
-| **Performance** | NAT translation overhead | Faster (direct access to host) |
-| **Security** | More secure | Less secure (host exposed) |
-| **Port Mapping** | Required (`-p`) | Not needed |
-
-📌 **Use `host` networking for low-latency applications** but prefer `bridge` for security.
-
----
 ## License
 This project is licensed under the MIT License.
 
