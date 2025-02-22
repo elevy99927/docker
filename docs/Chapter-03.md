@@ -36,4 +36,4 @@ For questions or feedback, feel free to reach out:
 
 ---
 ### **Next Steps**
-<A href="./Chapter-4.md">Exploring the core components and how they work together.</A>
+<A href="./Chapter-04.md">Exploring the core components and how they work together.</A>

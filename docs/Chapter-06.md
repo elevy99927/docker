@@ -53,4 +53,4 @@ For questions or feedback, feel free to reach out:
 
 ---
 ### **Next Steps**
-<A href="./Chapter-7.md">How Docker manages and runs containers internally.</A>
+<A href="./Chapter-07.md">How Docker manages and runs containers internally.</A>
