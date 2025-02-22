@@ -16,32 +16,8 @@
 | **Portability** | Not portable across machines | Can be backed up and moved |
 | **Best Use Case** | Sharing files **between host and container** | Persistent data storage for **databases and applications** |
 
-📌 **Example Use Cases:**  
-✅ Use **bind mounts** for local development (e.g., syncing code between host & container).  
-✅ Use **volumes** for databases, logs, and persistent storage.
-
 ---
-### **🔹 Managing Data Persistence in Containers**  
-1️⃣ **Bind Mounts** – Link container storage to a directory on the host.  
-2️⃣ **Docker Volumes** – Use Docker’s built-in storage management.  
-3️⃣ **Backup & Restore** – Protect data by **saving and restoring** volumes.
 
----
-### **🔹 Backup & Restore Strategies**  
-#### **Option 1: Tarball Backup (Recommended)**
-✅ **Backup a volume:**  
-```sh
-docker run --rm -v my-volume:/data -v $(pwd):/backup alpine tar -czf /backup/volume-backup.tar.gz -C /data .
-```
-✅ **Restore a volume:**  
-```sh
-docker run --rm -v my-volume:/data -v $(pwd):/backup alpine tar -xzf /backup/volume-backup.tar.gz -C /data
-```
-🔹 **Why?**  
-✔ Compressed storage  
-✔ Easily transferable  
-
----
 ### **🛠 Hands-On Exercise 1: Create a Local Directory & Mount It**  
 **Objective:** Use a **bind mount** to share a directory between the host and container.  
 
@@ -99,11 +75,25 @@ docker volume prune -f
 docker system prune -a -f
 ```
 ✅ **Expected Result:** The system is cleaned, removing unused data.
+---
+### **🔹 Backup & Restore Strategies**  
+#### **Option 1: Tarball Backup (Recommended)**
+✅ **Backup a volume:**  
+```sh
+docker run --rm -v my-volume:/data -v $(pwd):/backup alpine tar -czf /backup/volume-backup.tar.gz -C /data .
+```
+✅ **Restore a volume:**  
+```sh
+docker run --rm -v my-volume:/data -v $(pwd):/backup alpine tar -xzf /backup/volume-backup.tar.gz -C /data
+```
+🔹 **Why?**  
+✔ Compressed storage  
+✔ Easily transferable  
 
 ---
 ### **🔗 Hands-On Example: Working with Volumes**  
 🔹 **Reference:**  
-- **Additional Examples - Managing Persistent Data**: [Docker Volumes](https://github.com/elevy99927/docker/02-volumes)  
+- **Additional Examples - Managing Persistent Data**: [Docker Volumes](https://github.com/elevy99927/docker/tree/main/02-volumes)  
 
 ---
 ## License
