@@ -66,4 +66,4 @@ For questions or feedback, feel free to reach out:
 
 ---
 ### **Next Steps**
-<A href="./Chapter-6.md">understanding resource efficiency. </A>
+<A href="./Chapter-06.md">understanding resource efficiency. </A>
