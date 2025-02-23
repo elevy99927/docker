@@ -6,7 +6,7 @@
 - **Why Use Containers Instead of VMs?**
 - **Key Features of Docker**
 - **Hands-on Exercise: Running Your First Container**
-[Chapter 1: Introduction to Docker](https://github.com/elevy99927/docker/blob/main/docs/Chapter-01.md)
+- [Chapter 1: Introduction to Docker](https://github.com/elevy99927/docker/blob/main/docs/Chapter-01.md)
 
 
 ## ** Chapter 2: Understanding Containers vs. Virtual Machines**
@@ -14,7 +14,7 @@
 - **Performance & Resource Efficiency**
 - **Isolation & Security**
 - **Comparison Table: VMs vs. Containers**
-[Chapter 2: Why Use Containers Instead of Virtual Machines](https://github.com/elevy99927/docker/blob/main/docs/Chapter-02.md)
+- [Chapter 2: Why Use Containers Instead of Virtual Machines](https://github.com/elevy99927/docker/blob/main/docs/Chapter-02.md)
 
 ## ** Chapter 3: Pros and Cons of Docker**
 - ✅ **Advantages of Docker**
