@@ -28,18 +28,21 @@
 - Docker Daemon (`dockerd`)
 - Docker CLI (Command-Line Interface)
 - Docker API & Objects Overview
+- [Chapter 4: Docker Architecture](https://github.com/elevy99927/docker/blob/main/docs/Chapter-04.md)
 
 ##  Chapter 5: Docker Images, Containers, and Layers
 - What are Docker Images?
 - Understanding Layers & Union File System
 - Creating & Managing Containers from Images
 - Hands-on Exercise: Running Containers & Inspecting Images
+- [Chapter 5: Docker Images, Containers, and Layers](https://github.com/elevy99927/docker/blob/main/docs/Chapter-05.md)
 
 ##  Chapter 6: Running Multiple Containers from One Image
 - How Docker Reuses Images Efficiently
 - Avoiding Port Conflicts
 - Scaling Containers for Load Balancing
 - Hands-on Exercise: Running Multiple Containers
+- [Chapter 6: One Image to Many Containers](https://github.com/elevy99927/docker/blob/main/docs/Chapter-06.md)
 
 ##  Chapter 7: Docker Engine and Container Runtimes
 - Understanding `dockerd` vs. `containerd`
