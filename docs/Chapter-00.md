@@ -49,6 +49,7 @@
 - How Docker Runs Containers Internally
 - Comparison of Different Container Runtimes
 - Hands-on Exercise: Running a MySQL Container
+- [Chapter 7: Docker Engine and Container Runtimes](https://github.com/elevy99927/docker/blob/main/docs/Chapter-07.md)
 
 ##  Chapter 8: Namespaces & Cgroups (Process Isolation)
 - What are Namespaces?
