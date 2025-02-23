@@ -7,6 +7,21 @@ Docker provides **built-in networking capabilities** that allow containers to **
 Each container gets its own **isolated network stack** but can be connected using Docker’s network types.  
 
 ---
+
+## **Why is Container Networking Necessary?**
+Containers are designed to be **isolated** environments. Running independent applications or services. 
+However, **containers need to communicate with each other** and with external systems. 
+Some common scenarios where networking is required:
+
+**Multi-Container Applications** – A web app running in one container needs to communicate with a database running in another.
+**Service Discovery** – Microservices architectures require containers to dynamically find and connect to each other.
+**Load Balancing & Scaling** – When multiple containers run the same service, traffic must be distributed among them.
+**External Connectivity** – Some containers need internet access to pull updates, or expose services to users.
+
+Without networking, each container would be **completely isolated**, preventing applications from working together.
+
+
+---
 ### **🛠 Types of Docker Networks**  
 
 | Network Type | Description | Use Case |
@@ -17,6 +32,35 @@ Each container gets its own **isolated network stack** but can be connected usin
 | **Overlay** | Network for multi-host communication (Swarm/Kubernetes) | Distributed applications |
 | **Macvlan** | Assigns MAC addresses to containers (like physical devices) | Network virtualization |
 
+---
+## **Understanding Default Docker Networking & Its Limitations**
+
+By default, Docker **automatically assigns** new containers to a **bridge network** called `docker0`. This provides basic networking but comes with several limitations:
+
+### **1️⃣ Default Bridge Network (docker0)**
+- Containers connected to `docker0` can **communicate with each other**, but only via IP addresses.
+- **No built-in service discovery** – Containers don’t get meaningful hostnames.
+- **External access is limited** – You must explicitly **publish ports** to access a container.
+
+📌 **Example:**
+```sh
+docker network ls  # Lists available networks
+docker run -d --name container1 nginx
+docker run -d --name container2 alpine ping container1  # This will fail!
+```
+**Problem:** The ping fails because containers can’t resolve each other’s names in the default bridge network.
+
+### **2️⃣ Host Network**
+- Uses the **host machine’s network stack** instead of an isolated network.
+- **Pros:** Eliminates NAT overhead, allowing better performance.
+- **Cons:** Containers on the same port **conflict** with each other.
+
+### **3️⃣ None Network Mode**
+- Completely **disables networking** for the container.
+- Useful for **strict security** use cases.
+
+
+---
 
 ### **🔹 Host vs. Bridge Networking**  
 
