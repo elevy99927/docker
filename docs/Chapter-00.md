@@ -20,6 +20,8 @@
 - ✅ Advantages of Docker
 - ❌ Limitations & Challenges
 - Real-World Use Cases
+- [Chapter 3: Pros and Cons of Docker](https://github.com/elevy99927/docker/blob/main/docs/Chapter-03.md)
+
 
 ##  Chapter 4: Docker Architecture
 - Client-Server Model
@@ -122,13 +124,6 @@
 
 ---
 
-##  Why is This Flow Optimized?
-✔ Security & Production Best Practices First → Ensures proper container security before advanced builds.  
-✔ Docker Compose BEFORE the Final Project → Allows multi-container setups to be understood before deployment.  
-✔ CI/CD as an Optional Chapter → If students want to integrate Docker into automation pipelines, they have a dedicated section.  
-✔ Final Project at the End → Students will have all the necessary skills to deploy a full-fledged app.  
-
----
 ## License
 This project is licensed under the MIT License.
 
