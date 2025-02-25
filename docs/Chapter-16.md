@@ -106,13 +106,6 @@ docker scan mysecureapp
 ✔ If vulnerabilities are found, take action (update dependencies, reduce attack surface).  
 
 ---
-
-## ** Key Takeaways**
-**Security First** ➝ Never run containers as root, scan images, and minimize dependencies.  
-**Production-Ready Best Practices** ➝ Multi-stage builds, monitoring, and resource limits.  
-**Hands-on Implementation** ➝ Secure Nginx container **with real security features**.  
-
----
 ## License
 This project is licensed under the MIT License.
 
