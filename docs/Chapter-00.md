@@ -1,5 +1,6 @@
 
 # Docker Course - Full Syllabus (Chapters 1-20)
+# Part 1: Introduction and Docker basics
 
 ##  Chapter 1: Introduction to Docker
 - What is Docker?
@@ -56,45 +57,53 @@
 - What are Cgroups?
 - How Docker Uses Namespaces & Cgroups for Isolation
 - Hands-on Exercise: Managing Resources with Cgroups
+- [Chapter 8: Namespaces & Cgroups](https://github.com/elevy99927/docker/blob/main/docs/Chapter-08.md)
 
 ##  Chapter 9: Essential Docker Commands
 - Managing Containers (`run`, `ps`, `stop`, `rm`)
 - Handling Images (`pull`, `rmi`, `images`)
 - Inspecting Containers & Logs
 - Hands-on Exercise: Running & Managing an Nginx Container
+- [Chapter 9: Essential Docker Commands](https://github.com/elevy99927/docker/blob/main/docs/Chapter-09.md)
 
 ##  Chapter 10: Building Docker Images with Dockerfile
 - What is a Dockerfile?
 - Basic Dockerfile Instructions (`FROM`, `RUN`, `COPY`, `CMD`)
 - Hands-on Exercise: Building & Running a Custom Image
+- [Chapter 10: Building Docker Images with Dockerfile](https://github.com/elevy99927/docker/blob/main/docs/Chapter-10.md)
 
 ##  Chapter 11: ENV vs ARG in Docker Builds
 - What are `ENV` and `ARG`?
 - How They Differ & When to Use Each
 - Hands-on Exercise: Using `ENV` & `ARG` in Dockerfiles
+- [Chapter 11: ENV vs ARG in Docker Builds](https://github.com/elevy99927/docker/blob/main/docs/Chapter-11.md)
 
 ##  Chapter 12: Docker Build Context & Best Practices
 - Understanding Build Context & `.dockerignore`
 - Optimizing Image Size & Caching Layers
 - Best Practices for Secure & Efficient Images
 - Hands-on Exercise: Optimizing a Dockerfile
+- [Chapter 12: Understanding Docker Build Context & Best Practices](https://github.com/elevy99927/docker/blob/main/docs/Chapter-12.md)
 
 ##  Chapter 13: Working with Docker Hub & Private Registries
 - What is Docker Hub?
 - Pushing & Pulling Images to a Registry
 - Setting Up a Private Registry
 - Hands-on Exercise: Uploading an Image to Docker Hub
+- [Chapter 13: Working with Docker Hub & Registry](https://github.com/elevy99927/docker/blob/main/docs/Chapter-13.md)
 
 ##  Chapter 14: Docker Networking
 - Why is Container Networking Necessary?
 - Understanding Docker Network Types (Bridge, Host, Overlay)
 - Hands-on Exercise: Creating a Custom Network & Ping Containers
+- [Chapter 14: Docker Networking](https://github.com/elevy99927/docker/blob/main/docs/Chapter-14.md)
 
 ##  Chapter 15: Docker Volumes & Persistent Storage
 - Bind Mounts vs. Volumes
 - Managing Data Persistence in Containers
 - Backup & Restore Strategies
 - Hands-on Exercise: Using Docker Volumes for Data Storage
+- [Chapter 15: Docker Volumes & Persistent Storage](https://github.com/elevy99927/docker/blob/main/docs/Chapter-15.md)
 
 ---
 
