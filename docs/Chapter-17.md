@@ -2,6 +2,7 @@
 
 ### **Objective:**  
 This chapter focuses on **multi-stage builds**, this technique allows Docker users to **reduce image size, improve security, and optimize performance** by separating the build image(s) and the runtime image into two steps. 
+
 ---
 
 ## **Section 1: Understanding Multi-Stage Builds**  
