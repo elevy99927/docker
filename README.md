@@ -126,15 +126,15 @@ Welcome to the **Docker Labs** repository!
 - [Chapter 17: Multi-Stage Builds](https://github.com/elevy99927/docker/blob/main/docs/Chapter-17.md)
 
 ##  Chapter 18: Final Project
-- Install JFrog Artifactory ➝ [GitHub - JFrog JCR](https://github.com/elevy99927/Jenkins-k8s/tree/main/Part2-repo/02-Jfrog-JCR)
+- Install JFrog Artifactory 
 - Final Challenge: Build & Deploy a Complete App with Docker Multi-Stage Builds
 - Capstone Hands-on Project: Full-Stack Deployment with Docker
 - [Chapter 18: Local image repositories](https://github.com/elevy99927/docker/blob/main/docs/Chapter-18.md)
 
 ---
 
-# Next Step: Intro to Kubernetes
-## [Intro to Kubernetes](https://github.com/elevy99927/k8s)
+## Next Step: Intro to Kubernetes
+### [Intro to Kubernetes](https://github.com/elevy99927/k8s)
 
 
 ---
