@@ -113,6 +113,6 @@ For questions or feedback, feel free to reach out:
 
 ---
 ### **Next Steps**
-<A href="./Chapter-16.md">
-deploying a complete application with best practices
+<A href="./Chapter-18.md">
+Using local image repository
 </A>
