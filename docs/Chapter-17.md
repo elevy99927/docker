@@ -32,7 +32,7 @@ This image contains **both build dependencies and runtime dependencies**, making
 
 ## **Section 2: Writing a Multi-Stage Dockerfile**  
 
-### **Basic Multi-Stage Build Example**  
+### **Example 1: Basic Multi-Stage Build Example**  
 ```dockerfile
 # First stage: Build
 FROM node:18 AS builder
@@ -59,7 +59,7 @@ CMD ["node", "dist/server.js"]
 ## **Section 3: Best Practices for Multi-Stage Builds**  
 
 ### **Use Minimal Base Images for Production**  
-- Use **distroless or alpine-based images** instead of full operating systems.  
+- Use **minimal images** (such as alpine) instead of full operating systems.  
 - Example:  
   ```dockerfile
   FROM node:18-alpine
@@ -79,9 +79,9 @@ node_modules/
 Dockerfile
 ```
 
-### **Use Multi-Stage Builds for Compiled Languages**  
+### **Example 2: Use Multi-Stage Builds for Compiled Languages**  
 - For compiled applications like **Go, Java, or Rust**, the first stage compiles the application, while the second stage runs it.  
-- Example for a **Go application**:  
+- Another example, for a **Go application**:  
   ```dockerfile
   # First stage: Build
   FROM golang:1.19 AS builder
@@ -100,63 +100,7 @@ Dockerfile
 
 ## **Section 4: Hands-On Exercise - Optimizing an Application with Multi-Stage Builds**  
 
-### **Goal:**  
-Refactor an existing Dockerfile to **use multi-stage builds** and **reduce image size**.  
 
-### **Steps:**  
-
-#### **Step 1: Clone the Application Repository**  
-```sh
-git clone https://github.com/elevy99927/docker-multistage-example.git
-cd docker-multistage-example
-```
-
-#### **Step 2: Write the Initial Dockerfile (Without Multi-Stage Builds)**  
-```dockerfile
-FROM node:18
-WORKDIR /app
-COPY . .
-RUN npm install
-RUN npm run build
-CMD ["node", "dist/server.js"]
-```
-
-#### **Step 3: Convert to a Multi-Stage Build**  
-Modify the Dockerfile to separate the **build process** from the **final image**:  
-```dockerfile
-# First stage: Build
-FROM node:18 AS builder
-WORKDIR /app
-COPY . .
-RUN npm install
-RUN npm run build
-
-# Second stage: Production
-FROM node:18-alpine
-WORKDIR /app
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/node_modules ./node_modules
-CMD ["node", "dist/server.js"]
-```
-
-#### **Step 4: Build and Compare Image Sizes**  
-```sh
-docker build -t myapp-regular -f Dockerfile.regular .
-docker build -t myapp-multistage -f Dockerfile.multistage .
-docker images
-```
-- The **multi-stage build should result in a significantly smaller image size**.  
-
-#### **Step 5: Run the Optimized Container**  
-```sh
-docker run -d -p 8080:8080 myapp-multistage
-```
-
-#### **Step 6: Validate the Container**  
-Check that the application is running successfully:  
-```sh
-curl http://localhost:8080
-```
 ---
 ## License
 This project is licensed under the MIT License.
