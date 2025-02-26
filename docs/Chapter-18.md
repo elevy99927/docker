@@ -41,6 +41,6 @@ For questions or feedback, feel free to reach out:
 
 ---
 ### **Next Steps**
-<A href="./Chapter-18.md">
-Using local image repository
+<A href="https://github.com/elevy99927/k8s">
+Intro to Kubernetes
 </A>
