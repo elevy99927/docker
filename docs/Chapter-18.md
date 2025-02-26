@@ -27,6 +27,7 @@ The exercises focus on **creating remote, local, and virtual repositories** for 
 
 **Link to Lab**
 [Exercise: Installing and Testing JFrog Container Repository (JCR)](https://github.com/elevy99927/Jenkins-k8s/tree/main/Part2-repo/02-Jfrog-JCR)
+
 ---
 
 ## License
