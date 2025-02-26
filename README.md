@@ -117,24 +117,24 @@ Welcome to the **Docker Labs** repository!
 - Securing Docker Containers
 - Best Practices for Production Deployments
 - Hands-on Exercise: Secure a Containerized App
-[Chapter 16: Advanced Docker Topics](https://github.com/elevy99927/docker/blob/main/docs/Chapter-16.md)
+- [Chapter 16: Advanced Docker Topics](https://github.com/elevy99927/docker/blob/main/docs/Chapter-16.md)
 
 ##  Chapter 17: Multi-Stage Builds
 - Why Use Multi-Stage Builds?
 - Reducing Image Size & Security Best Practices
 - Hands-on Exercise: Building a Multi-Stage Docker Image
-[Chapter 17: Multi-Stage Builds](https://github.com/elevy99927/docker/blob/main/docs/Chapter-17.md)
+- [Chapter 17: Multi-Stage Builds](https://github.com/elevy99927/docker/blob/main/docs/Chapter-17.md)
 
 ##  Chapter 18: Final Project
 - Install JFrog Artifactory ➝ [GitHub - JFrog JCR](https://github.com/elevy99927/Jenkins-k8s/tree/main/Part2-repo/02-Jfrog-JCR)
 - Final Challenge: Build & Deploy a Complete App with Docker Multi-Stage Builds
 - Capstone Hands-on Project: Full-Stack Deployment with Docker
-[Chapter 18: Local image repositories](https://github.com/elevy99927/docker/blob/main/docs/Chapter-18.md)
+- [Chapter 18: Local image repositories](https://github.com/elevy99927/docker/blob/main/docs/Chapter-18.md)
 
 ---
 
 # Next Step: Intro to Kubernetes
-[Intro to Kubernetes](https://github.com/elevy99927/k8s)
+## [Intro to Kubernetes](https://github.com/elevy99927/k8s)
 
 
 ---
