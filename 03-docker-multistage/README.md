@@ -1,5 +1,5 @@
 
-## ** Hands-On LAB - Optimizing an Application with Multi-Stage Builds**  
+## Hands-On LAB - Optimizing an Application with Multi-Stage Builds
 
 ### **Goal:**  
 Refactor an existing Dockerfile to **use multi-stage builds** and **reduce image size**.  
@@ -19,7 +19,7 @@ WORKDIR /app
 COPY . .
 RUN npm install
 RUN npm run build
-CMD ["node", "dist/server.js"]
+CMD ["node", "server.js"]
 ```
 
 #### **Step 3: Convert to a Multi-Stage Build**  
@@ -35,9 +35,9 @@ RUN npm run build
 # Second stage: Production
 FROM node:18-alpine
 WORKDIR /app
-COPY --from=builder /app/dist ./dist
+COPY --from=builder /app ./
 COPY --from=builder /app/node_modules ./node_modules
-CMD ["node", "dist/server.js"]
+CMD ["node", "server.js"]
 ```
 
 #### **Step 4: Build and Compare Image Sizes**  
@@ -58,6 +58,13 @@ Check that the application is running successfully:
 ```sh
 curl http://localhost:8080
 ```
+
+#### **Step 7: Additioanl steps**  
+Try to think about additioal steps you can add to your `Dockerfile`, such as:
+- Lint
+- Code Scan (for example with [Code-cli](https://github.com/cycodehq/cycode-cli)
+- **Add your steps**
+
 ---
 ## License
 This project is licensed under the MIT License.
