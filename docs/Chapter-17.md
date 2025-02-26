@@ -98,8 +98,8 @@ Dockerfile
 
 ---
 
-## **Section 4: Hands-On Exercise - Optimizing an Application with Multi-Stage Builds**  
-
+## **Section 4: Hands-On LAB - Optimizing an Application with Multi-Stage Builds**  
+Follow the steps in **Multistage HandsOn LAB**: [https://github.com/elevy99927/docker/tree/main/03-docker-multistage](https://github.com/elevy99927/docker/tree/main/03-docker-multistage)
 
 ---
 ## License
