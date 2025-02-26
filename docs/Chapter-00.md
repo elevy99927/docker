@@ -18,8 +18,8 @@
 - [Chapter 2: Why Use Containers Instead of Virtual Machines](https://github.com/elevy99927/docker/blob/main/docs/Chapter-02.md)
 
 ##  Chapter 3: Pros and Cons of Docker
-- ✅ Advantages of Docker
-- ❌ Limitations & Challenges
+- Advantages of Docker
+- Limitations & Challenges
 - Real-World Use Cases
 - [Chapter 3: Pros and Cons of Docker](https://github.com/elevy99927/docker/blob/main/docs/Chapter-03.md)
 
@@ -113,27 +113,19 @@
 - Securing Docker Containers
 - Best Practices for Production Deployments
 - Hands-on Exercise: Secure a Containerized App
+[Chapter 16: Advanced Docker Topics](https://github.com/elevy99927/docker/blob/main/docs/Chapter-16.md)
 
 ##  Chapter 17: Multi-Stage Builds
 - Why Use Multi-Stage Builds?
 - Reducing Image Size & Security Best Practices
 - Hands-on Exercise: Building a Multi-Stage Docker Image
+[Chapter 17: Multi-Stage Builds](https://github.com/elevy99927/docker/blob/main/docs/Chapter-17.md)
 
-##  Chapter 18: Docker Compose
-- What is Docker Compose?
-- Defining Multi-Container Applications
-- Compose File Structure & Syntax (`docker-compose.yml`)
-- Hands-on Exercise: Deploying a Full-Stack App with Docker Compose
-
-##  Chapter 19: CI/CD Integration (Optional - DevOps Focused)
-- Automating Docker Builds with Jenkins/GitHub Actions
-- Building & Pushing Images to a Private Registry
-- Hands-on Exercise: CI/CD Pipeline for Dockerized Applications
-
-##  Chapter 20: Final Project
+##  Chapter 18: Final Project
 - Install JFrog Artifactory ➝ [GitHub - JFrog JCR](https://github.com/elevy99927/Jenkins-k8s/tree/main/Part2-repo/02-Jfrog-JCR)
 - Final Challenge: Build & Deploy a Complete App with Docker Multi-Stage Builds
 - Capstone Hands-on Project: Full-Stack Deployment with Docker
+[Chapter 18: Local image repositories](https://github.com/elevy99927/docker/blob/main/docs/Chapter-18.md)
 
 ---
 
