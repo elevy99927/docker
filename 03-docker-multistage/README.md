@@ -62,7 +62,7 @@ curl http://localhost:8080
 #### **Step 7: Additioanl steps**  
 Try to think about additioal steps you can add to your `Dockerfile`, such as:
 - Lint
-- Code Scan (for example with [Code-cli](https://github.com/cycodehq/cycode-cli)
+- Code Scan (for example with [Code-cli](https://github.com/cycodehq/cycode-cli) or [Snyk](https://docs.snyk.io/snyk-cli/install-or-update-the-snyk-cli))
 - **Add your steps**
 
 ---
@@ -75,4 +75,3 @@ For questions or feedback, feel free to reach out:
 - **Email**: eyal@levys.co.il
 - **GitHub**: [https://github.com/elevy99927](https://github.com/elevy99927)
 
-ß
