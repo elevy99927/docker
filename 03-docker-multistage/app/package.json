@@ -5,12 +5,14 @@
     "main": "app.js",
     "scripts": {
         "start": "node app.js",
+        "build": "echo 'No build step required'",
         "dev": "nodemon app.js",
         "test": "jest"
     },
     "author": "Your Name",
     "license": "MIT",
     "dependencies": {
+        "express": "^4.18.2"
     },
     "devDependencies": {
     }

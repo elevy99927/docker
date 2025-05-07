@@ -3,10 +3,9 @@ FROM node:18 AS builder
 WORKDIR /app
 COPY app .
 RUN npm install
-RUN npm run build
 
 # Second stage: Production
-FROM node:18-alpine
+FROM node:18-alpine AS runtime
 WORKDIR /app
 COPY --from=builder /app .
 COPY --from=builder /app/node_modules ./node_modules
