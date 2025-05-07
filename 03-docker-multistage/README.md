@@ -13,6 +13,8 @@ cd docker/03-docker-multistage
 ```
 
 #### **Step 2: Write the Initial Dockerfile (Without Multi-Stage Builds)**  
+File name `Dockerfile.regular`
+
 ```dockerfile
 FROM node:18
 WORKDIR /app
@@ -22,8 +24,15 @@ RUN npm run build
 CMD ["node", "server.js"]
 ```
 
+
+
 #### **Step 3: Convert to a Multi-Stage Build**  
-Modify the Dockerfile to separate the **build process** from the **final image**:  
+Modify the Dockerfile to separate the **build process** from the **final image**.
+
+
+
+### **Step 3 Solution**
+File name `Dockerfile.multistage`
 ```dockerfile
 # First stage: Build
 FROM node:18 AS builder
