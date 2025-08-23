@@ -1,3 +1,3 @@
 FROM nginx
 
-CMD ["nginx"]
+CMD ["nginx", "-g", "daemon off;"]
