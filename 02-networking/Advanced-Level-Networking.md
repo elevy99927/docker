@@ -11,8 +11,8 @@
    ```
 2. **Run two different web servers inside the network**  
    ```sh
-   docker run -d --name app1 --network reverse-proxy-network -e NGINX_PORT=8081 nginx
-   docker run -d --name app2 --network reverse-proxy-network -e NGINX_PORT=8082 nginx
+   docker run -d --name app1 --network reverse-proxy-network -p 8081:80 nginx:alpine sh -c "sed -i 's/80/8081/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+   docker run -d --name app2 --network reverse-proxy-network -p 8082:80 nginx:alpine sh -c "sed -i 's/80/8082/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
    ```
 3. **Run an Nginx reverse proxy container**  
    ```sh
