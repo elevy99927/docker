@@ -13,7 +13,7 @@ services: # Here we define our architecture services / roles
      - type: volume       # Shortsyntax -> logicalVolume01:/var/log
        source: logicalVoloume01
        target: /var/log
-   network: # Define netwroks per service / role
+   networks: # Define networks per service / role
      - db_layer
      - app_layer
 
