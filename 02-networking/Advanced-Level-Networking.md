@@ -27,13 +27,15 @@
      server {
          listen 80;
          location /app1 {
-             proxy_pass http://app1:8081;
+             proxy_pass http://app1:8081/;
          }
          location /app2 {
-             proxy_pass http://app2:8082;
+             proxy_pass http://app2:8082/;
          }
      }
      ```
+     you can test the configuration with the command "nginx -t" before apply changes.
+     
 5. **Restart the Nginx reverse proxy**  
    ```sh
    docker restart reverse-proxy
