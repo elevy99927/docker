@@ -33,6 +33,7 @@
              proxy_pass http://app2:8082/;
          }
      }
+     you can test the configuration with the command "nginx -t" before apply changes.
      ```
 5. **Restart the Nginx reverse proxy**  
    ```sh
