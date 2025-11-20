@@ -27,10 +27,10 @@
      server {
          listen 80;
          location /app1 {
-             proxy_pass http://app1:8081;
+             proxy_pass http://app1:8081/;
          }
          location /app2 {
-             proxy_pass http://app2:8082;
+             proxy_pass http://app2:8082/;
          }
      }
      ```
