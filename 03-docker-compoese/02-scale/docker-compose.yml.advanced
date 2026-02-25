@@ -1,7 +1,7 @@
 version: "3"
 services: 
   web:
-    image: default_apache
+    image: httpd
     deploy: 
       replicas: 3
       resources:
